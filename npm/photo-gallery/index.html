@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Photo Gallery - Terminality</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="generator" content="Jekyll v2.5.3">
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/screen.css">
+
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+		<!--[if lt IE 9]>
+		<script src="/js/html5shiv.min.js"></script>
+		<script src="/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="mobile-nav">
+	<button type="button" class="open-nav" id="open-nav"></button>
+	<img src="/img/text-logo.svg">
+</div>
+
+		<header>
+	<h1>Terminality</h1>
+
+	<nav>
+		<ul>
+			<li class="nav-item top-level ">
+				<a href="/">Getting Started</a>
+				
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/">Introduction</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/ruby-set-up/">Ruby Set Up</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/npm-set-up/">NPM Set Up</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/using-rbenv/">Using rbenv</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/using-nvm/">Using nvm</a></li>
+
+	
+</ul>
+
+			</li>
+			<li class="nav-item top-level ">
+				<a href="/gem/bourbon/">Gems</a>
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/bourbon/">Bourbon</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/bundler/">Bundler</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/jekyll/">Jekyll</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/sass/">Sass</a></li>
+
+	
+</ul>
+
+			</li>
+			<li class="nav-item top-level current">
+				<a href="/npm/atom-feed/">NPM</a>
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/atom-feed/">Atom Feed</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/navigation/">Navigation</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/output-as-json/">Output as JSON</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item current"><a href="/npm/photo-gallery/">Photo Gallery</a></li>
+
+	
+</ul>
+
+			</li>
+		</ul>
+
+		<p class="maintained">
+			Proudly themed by
+			<a target="_blank" href="http://cloudcannon.com"><img src="http://cloudcannon.com/img/logo.png"alt="CloudCannon"></a>
+		</p>
+	</nav>
+</header>
+
+
+		
+	
+	
+
+
+<section class="main">
+	<div class="content-box">
+		<h1>NPM</h1>
+
+		
+			<div class="asection-nav">
+	
+		
+	
+		
+	
+		
+	
+		
+			
+
+			
+				
+				<a href="/npm/output-as-json/" class="prev"></a>
+			
+
+			
+				<span class="next disabled"></span>
+			
+
+			
+</div>
+
+		
+
+		<article class="content contains-screenshots">
+			<h2>Photo Galleries in Jekyll</h2>
+			<p>Photo galleries typically have a lot of repeating code. It a good idea to remove any repeating code to make websites easy to maintain.</p>
+
+<p>Through this process we&#39;ll also makes it easier for non-technical users to update content in slideshows.</p>
+
+<p>For this tutorial we&#39;ll be using the <a href="http://shapebootstrap.net/download?id=439">Corlate</a> template from <a href="http://shapebootstrap.net/">ShapeBootstrap</a>.</p>
+
+<p>Open up <code>index.html</code> in your code editor and look at the HTML for the slideshow.</p>
+
+<p>To begin with there&#39;s a <code>ol</code> with a class of <code>carousel-indicators</code> which has an element for each slide. This displays the dots to show have many slides there are and which one is active. Let&#39;s just comment this part out for now and come back to it later.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">...
+<span class="c">&lt;!--&lt;ol class=&quot;carousel-indicators&quot;&gt;</span>
+<span class="c">    &lt;li data-target=&quot;#main-slider&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;</span>
+<span class="c">    &lt;li data-target=&quot;#main-slider&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;</span>
+<span class="c">    &lt;li data-target=&quot;#main-slider&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;</span>
+<span class="c">&lt;/ol&gt;--&gt;</span>
+...</code></pre></div>
+
+<p>We need to pull out the content for each slide and put it in Front Matter. So what content does each slide have? I can see:</p>
+
+<ul>
+<li>Background Image</li>
+<li>Main Heading</li>
+<li>Sub Heading</li>
+<li>Read More Link</li>
+<li>Pop up Image</li>
+</ul>
+
+<p>Here&#39;s that content marked out on the first slide:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">...
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item active&quot;</span> <span class="na">style=</span><span class="s">&quot;background-image: url(images/slider/bg1.jpg)&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- Background Image --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row slide-margin&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;carousel-content&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;animation animated-item-1&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit<span class="nt">&lt;/h1&gt;</span> <span class="c">&lt;!-- Main Heading --&gt;</span>
+          <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;animation animated-item-2&quot;</span><span class="nt">&gt;</span>Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...<span class="nt">&lt;/h2&gt;</span> <span class="c">&lt;!-- Sub Heading --&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn-slide animation animated-item-3&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Read More<span class="nt">&lt;/a&gt;</span> <span class="c">&lt;!-- Read More Link --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6 hidden-xs animation animated-item-4&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;slider-img&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;images/slider/img1.png&quot;</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- Pop up Image --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+...</code></pre></div>
+
+<p>Now we need to put the content for each slide into Front Matter.</p>
+
+<p>Specifying an array in YAML can be done using <code>-</code>:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">my_array</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">item 1</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">item 2</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">item 3</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">item 4</span></code></pre></div>
+
+<p>We can also have a hash for each item in the array like this:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">my_array</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Product 1</span>
+    <span class="l-Scalar-Plain">price</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$20</span>
+    <span class="l-Scalar-Plain">weight</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">40kg</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Product 2</span>
+    <span class="l-Scalar-Plain">price</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$78</span>
+    <span class="l-Scalar-Plain">weight</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">34kg</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Product 3</span>
+    <span class="l-Scalar-Plain">price</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$12</span>
+    <span class="l-Scalar-Plain">weight</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">14kg</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Product 4</span>
+    <span class="l-Scalar-Plain">price</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$99</span>
+    <span class="l-Scalar-Plain">weight</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">90kg</span></code></pre></div>
+
+<p>Now let&#39;s apply this to our slideshow.</p>
+
+<p>Add the following to the top of <code>index.html</code>:</p>
+
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+slideshows:
+  - background_image_path: /images/slider/bg1.jpg
+    main_heading: First Slide
+    sub_heading: This is the sub heading for the first slide
+    read_more_link: http://google.com
+    pop_up_image_path: /images/slider/img1.png
+  - background_image_path: /images/slider/bg2.jpg
+    main_heading: Second Slide
+    sub_heading: This is the sub heading for the second slide
+    read_more_link: /blog.html
+    pop_up_image_path: /images/slider/img2.png
+  - background_image_path: /images/slider/bg3.jpg
+    main_heading: Third Heading
+    sub_heading: This is the sub heading for the third slide
+    read_more_link: /portfolio.html
+    pop_up_image_path: /images/slider/img4.png
+---</code></pre></div>
+
+<p>And replace <code>&lt;div class=&quot;carousel-inner&quot;&gt;</code> with the following:</p>
+
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">...
+&lt;div class=&quot;carousel-inner&quot;&gt;
+  <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>item<span class="w"> </span>in<span class="w"> </span>page.slideshow<span class="w"> </span><span class="p">%}</span>
+    &lt;div class=&quot;item <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">forloop</span><span class="p">.</span><span class="nv">index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">%}</span><span class="nv">active</span><span class="err">{%</span><span class="w"> </span><span class="nv">endif</span><span class="w"> </span><span class="p">%}</span>&quot; style=&quot;background-image: url(<span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">background_image_path</span><span class="w"> </span><span class="p">}}</span>)&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row slide-margin&quot;&gt;
+          &lt;div class=&quot;col-sm-6&quot;&gt;
+            &lt;div class=&quot;carousel-content&quot;&gt;
+              &lt;h1 class=&quot;animation animated-item-1&quot;&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">main_heading</span><span class="w"> </span><span class="p">}}</span>&lt;/h1&gt;
+              &lt;h2 class=&quot;animation animated-item-2&quot;&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">sub_heading</span><span class="w"> </span><span class="p">}}</span>&lt;/h2&gt;
+              &lt;a class=&quot;btn-slide animation animated-item-3&quot; href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">read_more_link</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Read More&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;col-sm-6 hidden-xs animation animated-item-4&quot;&gt;
+            &lt;div class=&quot;slider-img&quot;&gt;
+              &lt;img src=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">pop_up_image_path</span><span class="w"> </span><span class="p">}}</span>&quot; class=&quot;img-responsive&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!--/.item--&gt;
+  <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+&lt;/div&gt;&lt;!--/.carousel-inner--&gt;
+...</code></pre></div>
+
+<p>This iterates over the array we set in the front matter and outputs the data in the same HTML structure as before.</p>
+
+<p>One tricky part is we need to set an active class on the first slide which is done using the forloop variable:</p>
+
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">...
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">forloop</span><span class="p">.</span><span class="nv">index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">%}</span><span class="nv">active</span><span class="err">{%</span><span class="w"> </span><span class="nv">endif</span><span class="w"> </span><span class="p">%}</span>
+...</code></pre></div>
+
+<p>If you upload the site to <a href="http://cloudcannon.com">CloudCannon</a> (remember you&#39;ll need to add a <code>_config.yml</code>), a non-technical user can easily change content, reorder the slideshow and add/remove slides.</p>
+
+<p><img src="/img/tutorials/slideshow/cloudcannon.png" alt="CloudCannon Front Matter"></p>
+
+<p>Everythings working now so let&#39;s get back to the carousel indicators. We just need to add an <code>&lt;li&gt;</code> for each slide and add a class of active to the first item.</p>
+
+<p>Uncomment <code>&lt;ol class=&quot;carousel-indicators&quot;&gt;</code> and replace it with this:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">...
+<span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;carousel-indicators&quot;</span><span class="nt">&gt;</span>
+    {% for item in page.slideshow %}
+      <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#main-slider&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;{{ forloop.index0 }}&quot;</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">forloop</span><span class="err">.</span><span class="na">index =</span><span class="s">=</span> <span class="na">1</span> <span class="err">%}</span><span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;&lt;/li&gt;</span>
+    {% endfor %}
+<span class="nt">&lt;/ol&gt;</span>
+...</code></pre></div>
+
+			
+		</article>
+	</div>
+</section>
+
+
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+			};
+		</script>
+	</body>
+</html>

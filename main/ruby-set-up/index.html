@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ruby Set Up - Terminality</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="generator" content="Jekyll v2.5.3">
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/screen.css">
+
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+		<!--[if lt IE 9]>
+		<script src="/js/html5shiv.min.js"></script>
+		<script src="/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="mobile-nav">
+	<button type="button" class="open-nav" id="open-nav"></button>
+	<img src="/img/text-logo.svg">
+</div>
+
+		<header>
+	<h1>Terminality</h1>
+
+	<nav>
+		<ul>
+			<li class="nav-item top-level current">
+				<a href="/">Getting Started</a>
+				
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/">Introduction</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item current"><a href="/main/ruby-set-up/">Ruby Set Up</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/npm-set-up/">NPM Set Up</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/using-rbenv/">Using rbenv</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/main/using-nvm/">Using nvm</a></li>
+
+	
+</ul>
+
+			</li>
+			<li class="nav-item top-level ">
+				<a href="/gem/bourbon/">Gems</a>
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/bourbon/">Bourbon</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/bundler/">Bundler</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/jekyll/">Jekyll</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/gem/sass/">Sass</a></li>
+
+	
+</ul>
+
+			</li>
+			<li class="nav-item top-level ">
+				<a href="/npm/atom-feed/">NPM</a>
+				<ul>
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/atom-feed/">Atom Feed</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/navigation/">Navigation</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/output-as-json/">Output as JSON</a></li>
+
+	
+		
+			
+		
+
+		<li class="nav-item "><a href="/npm/photo-gallery/">Photo Gallery</a></li>
+
+	
+</ul>
+
+			</li>
+		</ul>
+
+		<p class="maintained">
+			Proudly themed by
+			<a target="_blank" href="http://cloudcannon.com"><img src="http://cloudcannon.com/img/logo.png"alt="CloudCannon"></a>
+		</p>
+	</nav>
+</header>
+
+
+		
+	
+	
+
+
+<section class="main">
+	<div class="content-box">
+		<h1>Main</h1>
+
+		
+			<div class="asection-nav">
+	
+		
+	
+		
+			
+
+			
+				
+				<a href="/" class="prev"></a>
+			
+
+			
+				
+				<a href="/main/npm-set-up/" class="next"></a>
+			
+
+			
+</div>
+
+		
+
+		<article class="content contains-screenshots">
+			<h2>Ruby Set Up</h2>
+			<h3>Installation</h3>
+
+<p>This post explains how to install Ruby Gems on Windows or Linux systems, I don&#39;t have instructions for Mac, as I do not own one.</p>
+
+<h4>Ubuntu</h4>
+
+<p>There are two methods to installing ruby, the first, is to simply install it on it&#39;s own, like so..</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>apt-get install ruby ruby-dev</code></pre></div>
+
+<p>The second method is to install rbenv and ruby-build, which will allow you to switch ruby versions on the fly, installation is done like this..</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile</code></pre></div>
+
+<p>or, if you use zsh</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.zshrc
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.zshrc</code></pre></div>
+
+<p>Then restart the shell, and type</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">type </span>rbenv</code></pre></div>
+
+<p>to see if it has installed properly.</p>
+
+<p>In order to get ruby-build on Linux, you should type the following..</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code></pre></div>
+
+<h4>Windows</h4>
+
+<p>To install ruby on windows, download the <a href="http://rubyinstaller.org/downloads/">Ruby for Windows Binary</a> and install it, you&#39;ll also need the devkit from the same site.</p>
+
+<p>It is recommended to extract the devkit to <code>C:\RubyDevKit</code> once that&#39;s done, type the following into a terminal opened in the extracted folder..</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ruby dk.rb init
+<span class="nv">$ </span>ruby dk.rb install</code></pre></div>
+
+			
+		</article>
+	</div>
+</section>
+
+
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+			};
+		</script>
+	</body>
+</html>
