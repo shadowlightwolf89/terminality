@@ -18,22 +18,9 @@
     
       
         <url>
-          <loc>http://jekyll.tips/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
-          
-          
-            <changefreq>monthly</changefreq>
-          
-          
-            <priority>0.3</priority>
-          
-        </url>
-      
-        <url>
-          <loc>http://jekyll.tips/main/npm-set-up/</loc>
-          
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -44,22 +31,9 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/main/ruby-set-up/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/guide/npm-set-up/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
-          
-          
-            <changefreq>monthly</changefreq>
-          
-          
-            <priority>0.3</priority>
-          
-        </url>
-      
-        <url>
-          <loc>http://jekyll.tips/main/using-nvm/</loc>
-          
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -70,26 +44,9 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/main/using-rbenv/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/guide/ruby-set-up/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
-          
-          
-            <changefreq>monthly</changefreq>
-          
-          
-            <priority>0.3</priority>
-          
-        </url>
-      
-    
-  
-    
-      
-        <url>
-          <loc>http://jekyll.tips/gem/bourbon/</loc>
-          
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -100,22 +57,9 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/gem/bundler/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/guide/using-nvm/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
-          
-          
-            <changefreq>monthly</changefreq>
-          
-          
-            <priority>0.3</priority>
-          
-        </url>
-      
-        <url>
-          <loc>http://jekyll.tips/gem/jekyll/</loc>
-          
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -126,9 +70,9 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/gem/sass/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/guide/using-rbenv/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -143,22 +87,9 @@
     
       
         <url>
-          <loc>http://jekyll.tips/npm/atom-feed/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/gem/bourbon/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
-          
-          
-            <changefreq>monthly</changefreq>
-          
-          
-            <priority>0.3</priority>
-          
-        </url>
-      
-        <url>
-          <loc>http://jekyll.tips/npm/navigation/</loc>
-          
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -169,9 +100,9 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/npm/output-as-json/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/gem/bundler/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -182,9 +113,78 @@
         </url>
       
         <url>
-          <loc>http://jekyll.tips/npm/photo-gallery/</loc>
+          <loc>http://shadowlightwolf89.github.io/terminality/gem/jekyll/</loc>
           
-            <lastmod>2015-07-02T01:57:45-06:00</lastmod>
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.3</priority>
+          
+        </url>
+      
+        <url>
+          <loc>http://shadowlightwolf89.github.io/terminality/gem/sass/</loc>
+          
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.3</priority>
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://shadowlightwolf89.github.io/terminality/npm/atom-feed/</loc>
+          
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.3</priority>
+          
+        </url>
+      
+        <url>
+          <loc>http://shadowlightwolf89.github.io/terminality/npm/navigation/</loc>
+          
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.3</priority>
+          
+        </url>
+      
+        <url>
+          <loc>http://shadowlightwolf89.github.io/terminality/npm/output-as-json/</loc>
+          
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
+          
+          
+            <changefreq>monthly</changefreq>
+          
+          
+            <priority>0.3</priority>
+          
+        </url>
+      
+        <url>
+          <loc>http://shadowlightwolf89.github.io/terminality/npm/photo-gallery/</loc>
+          
+            <lastmod>2015-07-02T02:51:12-06:00</lastmod>
           
           
             <changefreq>monthly</changefreq>

@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Bundler - Terminality</title>
+		<title>NPM Set Up - Terminality</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="generator" content="Jekyll v2.5.3">
 
@@ -26,7 +26,7 @@
 
 	<nav>
 		<ul>
-			<li class="nav-item top-level ">
+			<li class="nav-item top-level current">
 				<a href="/terminality/">Getting Started Guide</a>
 				
 				<ul>
@@ -49,7 +49,7 @@
 			
 		
 
-		<li class="nav-item "><a href="/terminality/guide/npm-set-up/">NPM Set Up</a></li>
+		<li class="nav-item current"><a href="/terminality/guide/npm-set-up/">NPM Set Up</a></li>
 
 	
 		
@@ -69,7 +69,7 @@
 </ul>
 
 			</li>
-			<li class="nav-item top-level current">
+			<li class="nav-item top-level ">
 				<a href="/terminality/gem/bourbon/">Gems</a>
 				<ul>
 	
@@ -84,7 +84,7 @@
 			
 		
 
-		<li class="nav-item current"><a href="/terminality/gem/bundler/">Bundler</a></li>
+		<li class="nav-item "><a href="/terminality/gem/bundler/">Bundler</a></li>
 
 	
 		
@@ -156,7 +156,7 @@
 
 <section class="main">
 	<div class="content-box">
-		<h1>Gems</h1>
+		<h1>Guide</h1>
 
 		
 			<div class="asection-nav">
@@ -164,16 +164,18 @@
 		
 	
 		
+	
+		
 			
 
 			
 				
-				<a href="/terminality/gem/bourbon/" class="prev"></a>
+				<a href="/terminality/guide/ruby-set-up/" class="prev"></a>
 			
 
 			
 				
-				<a href="/terminality/gem/jekyll/" class="next"></a>
+				<a href="/terminality/guide/using-rbenv/" class="next"></a>
 			
 
 			
@@ -182,25 +184,26 @@
 		
 
 		<article class="content contains-screenshots">
-			<h2>Bundler & Gemfiles</h2>
+			<h2>NPM Set Up</h2>
 			<h3>Installation</h3>
 
-<p>Open a terminal window and run this command..</p>
+<p>This post explains how to install NPM on Windows or Linux systems, I don&#39;t have instructions for Mac, as I do not own one.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem install bundler</code></pre></div>
+<h4>Ubuntu</h4>
 
-<p>Specify your dependencies in a Gemfile in your project&#39;s root..</p>
+<p>There are two and a half methods to installing NPM, the first two are to install either NodeJS or iojs manually, the second is to install nvm, which is done like so..</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
-gem <span class="s1">&#39;nokogiri&#39;</span>
-gem <span class="s1">&#39;rack&#39;</span>, <span class="s1">&#39;~&gt;1.1&#39;</span>
-gem <span class="s1">&#39;rspec&#39;</span>, :require <span class="o">=</span>&gt; <span class="s1">&#39;spec&#39;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh <span class="p">|</span> bash</code></pre></div>
 
-<p>Install all of the required gems from your specified sources..</p>
+<p>or, if you use zsh</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle install</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh <span class="p">|</span> bash</code></pre></div>
 
-<p>for more information check out this gem&#39;s <a href="http://bundler.io/">home page</a>.</p>
+<p>Then restart your shell</p>
+
+<h4>Windows</h4>
+
+<p>To install NPM on Windows, download either <a href="https://nodejs.org/">NodeJS</a> or <a href="https://iojs.org/en/index.html">iojs</a> and install it.</p>
 
 			
 		</article>

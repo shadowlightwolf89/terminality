@@ -1242,7 +1242,7 @@ code.output {
     opacity: 1; }
 
 body, html {
-  background: #000 url(/img/background-repeat.png);
+  background: #000 url(../img/background-repeat.png);
   padding: 0;
   border-top: 0; }
 
@@ -1280,7 +1280,7 @@ header {
     display: block;
     margin: 0 auto; }
   .mobile-nav .open-nav {
-    background-image: url(/img/icons/menu.svg);
+    background-image: url(../img/icons/menu.svg);
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1304,7 +1304,7 @@ header {
   right: 0;
   top: 60px;
   bottom: 0;
-  background: #3a3a3a url(/img/background-repeat.png); }
+  background: #3a3a3a url(../img/background-repeat.png); }
   .main h1 {
     color: #4d4d4d;
     text-transform: uppercase;
@@ -1378,10 +1378,10 @@ header {
       display: none; }
   .asection-nav .prev {
     float: left;
-    background-image: url(/img/icons/arrow-back.svg); }
+    background-image: url(../img/icons/arrow-back.svg); }
   .asection-nav .next {
     float: right;
-    background-image: url(/img/icons/arrow-forward.svg); }
+    background-image: url(../img/icons/arrow-forward.svg); }
 
 .section-heading {
   margin-bottom: 15px; }

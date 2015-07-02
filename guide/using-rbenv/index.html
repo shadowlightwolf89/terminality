@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Bundler - Terminality</title>
+		<title>Using rbenv - Terminality</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="generator" content="Jekyll v2.5.3">
 
@@ -26,7 +26,7 @@
 
 	<nav>
 		<ul>
-			<li class="nav-item top-level ">
+			<li class="nav-item top-level current">
 				<a href="/terminality/">Getting Started Guide</a>
 				
 				<ul>
@@ -56,7 +56,7 @@
 			
 		
 
-		<li class="nav-item "><a href="/terminality/guide/using-rbenv/">Using rbenv</a></li>
+		<li class="nav-item current"><a href="/terminality/guide/using-rbenv/">Using rbenv</a></li>
 
 	
 		
@@ -69,7 +69,7 @@
 </ul>
 
 			</li>
-			<li class="nav-item top-level current">
+			<li class="nav-item top-level ">
 				<a href="/terminality/gem/bourbon/">Gems</a>
 				<ul>
 	
@@ -84,7 +84,7 @@
 			
 		
 
-		<li class="nav-item current"><a href="/terminality/gem/bundler/">Bundler</a></li>
+		<li class="nav-item "><a href="/terminality/gem/bundler/">Bundler</a></li>
 
 	
 		
@@ -156,7 +156,7 @@
 
 <section class="main">
 	<div class="content-box">
-		<h1>Gems</h1>
+		<h1>Guide</h1>
 
 		
 			<div class="asection-nav">
@@ -164,16 +164,20 @@
 		
 	
 		
+	
+		
+	
+		
 			
 
 			
 				
-				<a href="/terminality/gem/bourbon/" class="prev"></a>
+				<a href="/terminality/guide/npm-set-up/" class="prev"></a>
 			
 
 			
 				
-				<a href="/terminality/gem/jekyll/" class="next"></a>
+				<a href="/terminality/guide/using-nvm/" class="next"></a>
 			
 
 			
@@ -182,25 +186,24 @@
 		
 
 		<article class="content contains-screenshots">
-			<h2>Bundler & Gemfiles</h2>
-			<h3>Installation</h3>
+			<h2>Using rbenv</h2>
+			<h3>Installing Ruby Versions</h3>
 
-<p>Open a terminal window and run this command..</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv install -l</code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem install bundler</code></pre></div>
+<p>To list all available versions,</p>
 
-<p>Specify your dependencies in a Gemfile in your project&#39;s root..</p>
+<p>then</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
-gem <span class="s1">&#39;nokogiri&#39;</span>
-gem <span class="s1">&#39;rack&#39;</span>, <span class="s1">&#39;~&gt;1.1&#39;</span>
-gem <span class="s1">&#39;rspec&#39;</span>, :require <span class="o">=</span>&gt; <span class="s1">&#39;spec&#39;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv install 2.2.2</code></pre></div>
 
-<p>Install all of the required gems from your specified sources..</p>
+<p>for example, to install ruby version 2.2.2, if you want to then, uninstall your ruby version..</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle install</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv uninstall 2.2.2</code></pre></div>
 
-<p>for more information check out this gem&#39;s <a href="http://bundler.io/">home page</a>.</p>
+<p>If you want a single, globally used version to always be accessible when you first start the terminal, add this to your .bash_profile or .zshrc</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">RBENV_VERSION</span><span class="o">=</span>2.2.2</code></pre></div>
 
 			
 		</article>
